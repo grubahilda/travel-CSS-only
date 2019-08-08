@@ -157,7 +157,7 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    transition: all 0.4s;
+    transition: all 0.4s; /* apply to all elements of .btn */
 }
 .btn-white::after {
     background-color: #fff;
