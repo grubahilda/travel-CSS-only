@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;  /* inherit box-sizing for each element from the body */
+}
+
+html {
+    font-size: 62.5%; /* we want 10px / 16px (default) * 100% */
+}
+
+body {
+    box-sizing: border-box;  
+}
