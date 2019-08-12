@@ -21,3 +21,17 @@
 .u-margin-top-huge {
   margin-bottom: 10rem;
 }
+
+.u-gradient-top-small {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8rem;
+  width: 100%;
+  z-index: 1;
+  background-image: linear-gradient(
+    to bottom,
+    $color-grey-light-1,
+    transparent
+  );
+}
