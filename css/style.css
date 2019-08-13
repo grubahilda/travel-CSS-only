@@ -372,7 +372,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, -50%);
     text-transform: uppercase;
     color: #fff;
     font-size: 1.7rem;
@@ -559,10 +559,9 @@ body {
     height: 3.5rem; }
   .header__text-box {
     position: absolute;
-    transform: translate(-50%, -50%);
-    /* shisfting the weight center */
-    top: 40%;
+    top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center; }
 
 .row {

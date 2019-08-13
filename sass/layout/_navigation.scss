@@ -50,10 +50,7 @@
     text-align: center;
     width: 100%; // to avoid animation coming from side
     list-style: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include absCenter;
   }
 
   &__item {

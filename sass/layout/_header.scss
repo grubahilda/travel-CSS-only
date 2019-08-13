@@ -29,10 +29,7 @@
   }
 
   &__text-box {
-    position: absolute;
-    transform: translate(-50%, -50%); /* shisfting the weight center */
-    top: 40%;
-    left: 50%;
+    @include absCenter;
     text-align: center;
   }
 }
