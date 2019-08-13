@@ -2,12 +2,10 @@
   background-color: $color-grey-light-1;
   padding: 25rem 0;
   margin-top: -20vh;
-  height: 100vh;
 }
 
 .section-features {
   padding: 20rem 0;
-  height: 80vh;
   background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.801),
@@ -25,9 +23,8 @@
 
 .section-tours {
   background-color: $color-grey-light-1;
-  padding: 25rem 0 15rem 0;
+  padding: 25rem 0 4rem 0;
   margin-top: -11rem;
-  height: 115vh;
 }
 
 .section-testimonials {
