@@ -1,15 +1,33 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;  /* inherit box-sizing for each element from the body */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* inherit box-sizing for each element from the body */
 }
 
 html {
-    font-size: 62.5%; /* we want 10px / 16px (default) * 100% */
+  // this defines what 1 rem would be
+  font-size: 62.5%; /* we want 1 rem = 10px so: 10px / 16px (default) * 100% */
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1 rem = 9px, 9px/16px * 100% = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1 rem = 8px, 8px/16px * 100% = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1 rem = 12px
+  }
 }
 
 body {
-    box-sizing: border-box;  
+  box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }

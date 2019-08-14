@@ -18,6 +18,16 @@
   ); // for other browsers
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+  @include respond(tab-port) {
+    -webpack-clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 85vh,
+      0 100%
+    ); // for other browsers
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
   &__logo-box {
     position: absolute;
     left: 4rem;

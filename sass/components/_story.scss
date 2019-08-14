@@ -9,6 +9,18 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    padding: 3rem;
+    padding-left: 5rem;
+    transform: skewX(-2deg);
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -22,6 +34,10 @@
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg); // instead of margin
     position: relative;
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(2deg);
+    }
   }
 
   &__image {
@@ -33,6 +49,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(2deg);
+    }
   }
 
   &__caption {

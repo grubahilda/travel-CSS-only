@@ -1,10 +1,18 @@
 .row {
   max-width: $grid-width;
-  // height: 95%;
   margin: 0 auto;
 
   &:not(:last-child) {
     margin-bottom: $grid-space-vertical;
+
+    @include respond(tab-port) {
+      margin-bottom: $grid-space-vertical-small;
+    }
+  }
+
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 
   @include clearfix;
@@ -13,37 +21,46 @@
     float: left;
 
     &:not(:last-child) {
-      margin-right: $grid-space-hotizontal;
+      margin-right: $grid-space-horizontal;
+
+      @include respond(tab-port) {
+        margin-right: $grid-space-vertical-small;
+        margin-bottom: $grid-space-vertical-small;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
     }
   }
 
   .col-1-of-2 {
-    width: calc((100% - #{$grid-space-hotizontal}) / 2);
+    width: calc((100% - #{$grid-space-horizontal}) / 2);
   }
 
   .col-1-of-3 {
-    width: calc((100% - 2 *#{$grid-space-hotizontal}) / 3);
+    width: calc((100% - 2 *#{$grid-space-horizontal}) / 3);
   }
 
   .col-2-of-3 {
     width: calc(
-      (100% - 2 *#{$grid-space-hotizontal}) / 3 * 2 + #{$grid-space-hotizontal}
+      (100% - 2 *#{$grid-space-horizontal}) / 3 * 2 + #{$grid-space-horizontal}
     );
   }
 
   .col-1-of-4 {
-    width: calc((100% - 3 *#{$grid-space-hotizontal}) / 4);
+    width: calc((100% - 3 *#{$grid-space-horizontal}) / 4);
   }
 
   .col-2-of-4 {
     width: calc(
-      (100% - 3 *#{$grid-space-hotizontal}) / 4 * 2 + #{$grid-space-hotizontal}
+      (100% - 3 *#{$grid-space-horizontal}) / 4 * 2 + #{$grid-space-horizontal}
     );
   }
 
   .col-3-of-4 {
     width: calc(
-      (100% - 3 *#{$grid-space-hotizontal}) / 4 * 3 + 2 *#{$grid-space-hotizontal}
+      (100% - 3 *#{$grid-space-horizontal}) / 4 * 3 + 2 *#{$grid-space-horizontal}
     );
   }
 }
