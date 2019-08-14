@@ -74,6 +74,10 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   font-size: $default-font-size;
+
+  @include respond(tab-land) {
+    font-size: 1.3rem;
+  }
 }
 
 .paragraph {

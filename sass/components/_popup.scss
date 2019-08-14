@@ -38,6 +38,17 @@
   &__left {
     width: 33.33333333%;
     display: table-cell;
+
+    @include respond(tab-port) {
+      width: 100%;
+      display: table;
+    }
+  }
+
+  &__left img[src*="img/nat-9.jpg"] {
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__right {
@@ -45,11 +56,28 @@
     display: table-cell;
     vertical-align: middle;
     padding: 0 4rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      display: block;
+      padding: 4rem;
+    }
   }
 
   &__photo {
-    display: block;
+    display: table-cell;
     width: 100%;
+
+    @include respond(tab-port) {
+      width: 50%;
+      margin-top: -1rem;
+      vertical-align: bottom;
+      display: inline-block;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 
   &__text {
@@ -70,6 +98,20 @@
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+
+    @include respond(tab-land) {
+      margin-bottom: 1.5rem;
+    }
+
+    @include respond(tab-port) {
+    }
+
+    @include respond(phone) {
+      -moz-column-count: 1;
+      -webkit-column-count: 1;
+      -ms-column-count: 1;
+      column-count: 1;
+    }
   }
 
   &__close {
