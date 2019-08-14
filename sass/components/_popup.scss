@@ -38,6 +38,7 @@
   &__left {
     width: 33.33333333%;
     display: table-cell;
+    background-color: $color-black;
 
     @include respond(tab-port) {
       width: 100%;
