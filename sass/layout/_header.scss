@@ -5,7 +5,7 @@
       rgba($color-primary-light, 0.801),
       rgba($color-primary-dark, 0.801)
     ),
-    url(../img/hero.jpg);
+    url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -17,6 +17,17 @@
     0 100%
   ); // for other browsers
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5rem),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5rem),
+    (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.801),
+        rgba($color-primary-dark, 0.801)
+      ),
+      url(../img/hero.jpg);
+  }
 
   @include respond(tab-port) {
     -webpack-clip-path: polygon(

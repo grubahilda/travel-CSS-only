@@ -46,7 +46,8 @@
     }
   }
 
-  &__left img[src*="img/nat-9.jpg"] {
+  &__left img[src*="img/nat-9.jpg"],
+  &__left img[src*="img/nat-9-large.jpg"] {
     @include respond(phone) {
       display: none;
     }
